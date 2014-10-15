@@ -19,7 +19,7 @@ function which(binary, callback) {
 
   if (found.length === 0) {
     if (callback) {
-      callback('No executable found: '+binary);  
+      callback('No executable found: '+binary);
     }
     else {
       deferred.reject('No executable found: '+binary);
@@ -29,7 +29,7 @@ function which(binary, callback) {
   }
   else {
     if (callback) {
-      callback(null, found[0], found);  
+      callback(null, found[0], found);
     }
     else {
       deferred.resolve(found[0]);
@@ -39,9 +39,3 @@ function which(binary, callback) {
 }
 
 module.exports = which;
-
-which('node').then((binPath) => {
-  console.log(binPath);
-})
-
-
