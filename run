@@ -1,0 +1,3 @@
+#!/bin/bash
+
+jpm -b /Applications/FirefoxNightly.app -o ~/code/jetpack/addon-sdk $@

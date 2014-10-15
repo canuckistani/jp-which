@@ -1,0 +1,15 @@
+{
+  "name": "jp-which",
+  "version": "0.0.1",
+  "description": "Find the path of an interpreter or script on your local system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jp-executable": "0.0.1",
+    "lodash": "^2.4.1"
+  }
+}
