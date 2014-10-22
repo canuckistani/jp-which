@@ -2,6 +2,7 @@ const { env } = require('sdk/system/environment');
 const _ = require('lodash');
 const executable = require('jp-executable');
 const fs = require('sdk/io/fs');
+const { resolve } = require('sdk/fs/path');
 const file = require('sdk/io/file');
 const { defer } = require('sdk/core/promise');
 
@@ -28,11 +29,12 @@ function which(binary, callback) {
     
   }
   else {
+    let binPath = resolve(found[0], binary);
     if (callback) {
-      callback(null, found[0], found);
+      callback(null, binPath);
     }
     else {
-      deferred.resolve(found[0]);
+      deferred.resolve(binPath);
       return deferred.promise;
     }
   }
